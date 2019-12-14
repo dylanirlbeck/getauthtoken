@@ -24,12 +24,11 @@ module Getauthtoken
       .post(BASE_URL, body: json)
     
     return response.code == 200 ? JSON.parse(response)["data"][0]["token"] : nil
-  
+  end
+
   def self.pbcopy(token)
     IO.popen('pbcopy', 'w') { |f| f << token }
     token
-  end
-
   end
 
 end

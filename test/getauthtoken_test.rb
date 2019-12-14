@@ -17,4 +17,8 @@ describe Getauthtoken do
 
     assert_nil token
   end
+
+  it `pbcopy exists` do
+    refute_nil Getauthtoken::pbcopy
+  end
 end
