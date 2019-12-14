@@ -25,7 +25,7 @@ module Getauthtoken
     
     return response.code == 200 ? JSON.parse(response)["data"][0]["token"] : nil
   
-  def pbcopy(token)
+  def self.pbcopy(token)
     IO.popen('pbcopy', 'w') { |f| f << token }
     token
   end
