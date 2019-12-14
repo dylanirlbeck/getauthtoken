@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+require 'getauthtoken'
+
+puts "Authenticating with Xaptum..."
+token = Getauthtoken::authenticate()
+Getauthtoken::pbcopy(token)
+puts "Your token is #{token}. It has been copied to the clipboard."
