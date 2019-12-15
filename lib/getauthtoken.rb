@@ -11,7 +11,7 @@ module Getauthtoken
   end
 
   def self.get_credentials()
-    file = File.open("credentials.json")
+    file = File.open(File.expand_path("~/.xaptum_credentials.json"))
     data = JSON.load file
     file.close
     return data

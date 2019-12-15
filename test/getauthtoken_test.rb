@@ -1,6 +1,7 @@
 require "test_helper"
 
 describe Getauthtoken do
+  puts File.expand_path("~/.xaptum_credentials.json")
   it 'has a version number' do
     refute_nil Getauthtoken::VERSION
   end
@@ -18,7 +19,4 @@ describe Getauthtoken do
     assert_nil token
   end
 
-  it `pbcopy exists` do
-    refute_nil Getauthtoken::pbcopy
-  end
 end
