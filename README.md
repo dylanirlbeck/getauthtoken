@@ -50,6 +50,12 @@ Write tests, pass tests, bump version, pull request.
 - **Bump version:** The current version of the gem is in `lib/getauthtoken/version.rb`. After you've made your changes, update this version by following the format `MAJOR.MINOR.PATCH`.
 - **Pull request:** Open a PR! One of the maintainers will review your changes and work with you to get them merged.
 
+For maintainers: building new gem version and pushing to Github and Ruby Gems
+
+```shell
+$ bundle exec rake release
+```
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/dylanirlbeck/getauthtoken.
