@@ -6,11 +6,19 @@ Running `getauthtoken` from your command line after installation (see below) wil
 
 ## Installation
 
-First, install the gem from [Ruby Gems](https://rubygems.org). You may need to `sudo gem install` here.
+First, install the gem from [Ruby Gems](https://rubygems.org).
 
 ```shell
 $ gem install getauthtoken
 ```
+
+Alternatively, if you've already installed `getauthtoken`, update the gem to the latest version.
+
+```shell
+$ gem update getauthtoken
+```
+
+_Note that for the above commands you may need to use `sudo gem`._
 
 Second, we'll need to create a JSON file `.xaptum_credentials.json` that stores your Xaptum credentials. `getauthtoken` will always use the credentials in this file to acquire your auth token.
 
@@ -49,6 +57,14 @@ Write tests, pass tests, bump version, pull request.
 - **Pass tests:** Write code in `lib/getauthtoken.rb` to pass the tests. You can run tests with `$ rake test`.
 - **Bump version:** The current version of the gem is in `lib/getauthtoken/version.rb`. After you've made your changes, update this version by following the format `MAJOR.MINOR.PATCH`.
 - **Pull request:** Open a PR! One of the maintainers will review your changes and work with you to get them merged.
+
+### For Maintainers
+
+Build a new gem version, pushing to Github (along with a tag), and add the new version to Ruby Gems
+
+```shell
+$ bundle exec rake release
+```
 
 ## Contributing
 

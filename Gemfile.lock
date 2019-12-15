@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    getauthtoken (0.3.0)
+    getauthtoken (0.4.1)
       http (~> 4.2.0)
 
 GEM
