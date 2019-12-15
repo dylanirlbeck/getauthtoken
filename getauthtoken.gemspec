@@ -8,16 +8,13 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Dylan Irlbeck"]
   spec.email         = ["irlbeck2@illinois.edu"]
 
-  spec.summary       = "acquire copy a Xaptum API auth token into clipboard"
-  spec.description   = "Small CLI to acquire and copy a Xaptum API authentication token into your clipboard."
+  spec.summary       = "Acquire a Xaptum API authorization token"
+  spec.description   = "Small CLI utility to acquire a Xaptum API authentication token and copy into your clipboard."
   spec.homepage      = "https://xaptum.com"
   spec.license       = "MIT"
 
-
-  spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
-
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "https://github.com/xaptum"
+  spec.metadata["source_code_uri"] = "https://github.com/dylanirlbeck/getauthtoken"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.

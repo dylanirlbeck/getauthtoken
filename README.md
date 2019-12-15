@@ -1,34 +1,49 @@
 # Getauthtoken
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/getauthtoken`. To experiment with that code, run `bin/console` for an interactive prompt.
+`getauthtoken` is a small command line utility to acquire an authorization token from [Xaptum](https://dev.xaptum.io). It's intended to speed up the process of testing API's, since an authorization token is required as a header in every request and new tokens are generated every four hours. 
 
-TODO: Delete this and the text above, and describe your gem
+Running `getauthtoken` from your command line after installation (see below) will always give the current token.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+First, clone the repository and install the gem locally. You may need to `sudo gem install` here.
 
-```ruby
-gem 'getauthtoken'
+```shell
+$ git clone https://github.com/dylanirlbeck/getauthtoken.git
+$ cd getauthtoken
+$ gem install getauthtoken-0.3.0.gem
 ```
 
-And then execute:
+Second, we'll need to create JSON file that stores your Xaptum credentials. `getauthtoken` will always use the credentials in this file to acquire your auth token. In your `$HOME` directory, create the file `.xaptum_credentials.json` with the following structure:
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install getauthtoken
+```json
+{
+    "username": "<YOUR_USERNAME>",
+    "password": "<YOUR_PASSWORD>"
+}
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+Simply run `getauthtoken` from the command line. The token should then appear and get copied to your clipboard.
+
+Note that you do **not** have to be in the `getauthtoken` project directory (that you cloned earlier) to use this utility.
+
+```shell
+$ getauthtoken
+Authenticating with Xaptum...
+Your token is <TOKEN>. It has been copied to the clipboard.
+```
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+Write tests, pass tests, bump version, pull request.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+Running the tests
+
+```shell
+$ rake test
+```
 
 ## Contributing
 
