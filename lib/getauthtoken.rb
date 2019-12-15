@@ -7,14 +7,14 @@ module Getauthtoken
 
   def self.authenticate()
      credentials = get_credentials()
-     return post_credentials(credentials) 
+     post_credentials(credentials) 
   end
 
   def self.get_credentials()
     file = File.open(File.expand_path("~/.xaptum_credentials.json"))
     data = JSON.load file
     file.close
-    return data
+    data
   end
 
   def self.post_credentials(credentials)
@@ -23,12 +23,11 @@ module Getauthtoken
     response = HTTP.headers("Content-Type": "application/json", "Accept": "application/json")
       .post(BASE_URL, body: json)
     
-    return response.code == 200 ? JSON.parse(response)["data"][0]["token"] : nil
+    response.code == 200 ? JSON.parse(response)["data"][0]["token"] : nil
   end
 
   def self.pbcopy(token)
     IO.popen('pbcopy', 'w') { |f| f << token }
-    token
   end
 
 end
