@@ -1,7 +1,13 @@
 #!/usr/bin/env ruby
 require 'getauthtoken'
+require 'highline/import'
+
+def get_password(prompt = "Enter Password")
+    ask(prompt) {|q| q.echo = false}
+end
 
 puts "Authenticating with Xaptum..."
-token = Getauthtoken::authenticate()
+password = get_password()
+token = Getauthtoken::authenticate(password)
 Getauthtoken::pbcopy(token)
 puts "Your token is #{token}. It has been copied to the clipboard."
