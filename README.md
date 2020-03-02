@@ -1,3 +1,5 @@
+> Note: this repo is not actively maintained, as its functionality has been merged in to the `enfcli`, a closed-source command line tool provided by [Xaptum](https://xaptum.com) for their customers. For more information, reach out to Xaptum!
+
 # getauthtoken
 
 [![Gem Version](https://badge.fury.io/rb/getauthtoken.svg)](https://badge.fury.io/rb/getauthtoken)
